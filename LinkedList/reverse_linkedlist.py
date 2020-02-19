@@ -11,6 +11,10 @@ class Solution(object):
         return
 
     def pushElements(self, item):
+        """
+        Function to push elements into a SLL
+        P.S This function is like super important
+        """
 
         if not isinstance(item, ListNode):
             item = ListNode(item)
