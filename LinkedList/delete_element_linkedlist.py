@@ -28,7 +28,6 @@ class Solution(object):
             curr = curr.next
 
     def deleteNode(self, data):
-        prev = None
         curr = self.head
         while curr:
             if curr.next.val == data:
