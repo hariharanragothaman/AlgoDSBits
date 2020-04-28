@@ -10,4 +10,3 @@ def longest_uncommon_subsequence(string1, string2):
         return -1
     else:
         return max(len(string1), len(string2))
-    
