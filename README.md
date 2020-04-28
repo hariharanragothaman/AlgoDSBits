@@ -18,7 +18,7 @@ Solutions to leetcode online challenges, topic wise.
 9. Binary Search      
 10. Heap      
 
-### Topics to Learn / Master        
+### Topics to Master        
 1. Tree   
 2. Depth-First Search      
 3. Breadth-First Search     
@@ -30,7 +30,7 @@ Solutions to leetcode online challenges, topic wise.
 9. Recursion     
 10. Divide and Conquer      
 
-### Advanced Topics       
+### To learn: Advanced Topics       
 1. Bit Manipulation     
 2. Ordered Map     
 3. Segment Tree    
@@ -42,7 +42,7 @@ Solutions to leetcode online challenges, topic wise.
 9. Binary Search Tree    
 10. Dynamic Programming (DP) - Very Important
 
-### Other   
+### Other Topics   
 1. Brain-Teasers    
 2. Rejection Sampling   
 3. Memoization    
