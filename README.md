@@ -5,6 +5,12 @@ Solutions to leetcode online challenges, topic wise.
 1. Check-in / Revise everyday based on Topics and frequency in topics
 2. Revise problems everyday           
 
+### Strategy:   
+1. We need to split our time between solving new problems & revising old ones.   
+2. Everyday 10 Problems - Goal     
+
+__Leetcode Count__: 329/1305           
+
 ### Comfortable Topics       
 
 1. Array   
