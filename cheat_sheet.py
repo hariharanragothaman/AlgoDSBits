@@ -9,6 +9,10 @@ from collections import Counter
 import heapq
 import itertools
 
+"""
+General Important Hacks
+"""
+
 # To sort a hash-map by value or key
 hash_map = {}
 hash_map = {k: v for k, v in sorted(hash_map.items(), key=lambda item: item[1])}
@@ -31,9 +35,14 @@ top_three_largest = heapq.nlargest(3, marks)
 top_three_smallest = heapq.nsmallest(3, marks)
 
 # Flatten a list of lists
-list1 = [[1,2,3], [4,5,6],[7,8,9]]
+list1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 flt = list(itertools.chain.from_iterable(list1))
 
+# Usage of all()
+# It takes an iterable and returns if the contents of the iterable is True
+samples = [5, 6, 7, 8, 9]
+check = all(c for c in samples if c > 5)
+print(check)
 
 # Let's say you zip 2 objects - you can convert them into a hashmap easily
 t1 = (1, 2, 3)
@@ -43,12 +52,15 @@ op = dict(zip(t1, t2))
 
 # To find all factors of a number in python
 from functools import reduce
+
+
 def factors(n):
     return set(reduce(list.__add__,
-                ([i, n//i] for i in range(1, int(n**0.5) + 1) if n % i == 0)))
+                      ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0)))
+
 
 # Lambda Basic Example
-add = lambda x, y : x + y
+add = lambda x, y: x + y
 add(4, 5)
 
 # Writing an if-else in one-line
@@ -71,6 +83,32 @@ matrix[:] = zip(*matrix[::-1])
 def get_rows(matrix):
     return [[c for c in r] for r in matrix]
 
+
 # To get the columns of a matrix
 def get_columns(matrix):
     return zip(*matrix)
+
+
+# ------------------------------------------------------------------------------------------------------------------
+"""
+String related hacks
+"""
+
+# Check if 's' is a subsequence of t - Method1
+def is_sub_sequence(s, t):
+    for i in range(len(s)):
+        try:
+            index = t.index(s[i])
+        except ValueError:
+            return False
+        t = t[index + 1:]
+    return True
+
+
+# A smarter way of doing this.
+def is_sub_sequence2(s, t):
+    t = iter(t)
+    # Here 'c in t' is a condition
+    # if it's false - for one of the char is not found.
+    # iter - takes care of it - next()
+    return all(c in t for c in s)
