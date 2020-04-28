@@ -9,7 +9,8 @@ Solutions to leetcode online challenges, topic wise.
 1. We need to split our time between solving new problems & revising old ones.   
 2. Goal: Solve 10 new Problems everyday.    
          Revise 10+ already solved problems.      
-3. We need map 1-Topic per day and keep going     
+3. We need map 1-Topic per day and keep going.     
+   Note: There will be overlap anyway, We will have to use stack to solve an array problem     
 4. During contests - we need to attack the entire Q-bank for that contest in Explore section.      
 5. Learning is as important as revising. ---> Lead to solving more problems.       
 
