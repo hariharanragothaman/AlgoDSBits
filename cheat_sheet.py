@@ -9,4 +9,3 @@ inp_list = []
 ctr = Counter(inp_list)
 # This creates a tuple, and tuple are by default sorted by value, then we set the priority
 res = sorted(ctr, key= lambda x:(-ctr[x], x))
-
