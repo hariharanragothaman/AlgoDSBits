@@ -8,7 +8,7 @@ def longest_substring_without_repeat_chars(string):
     left, right = 0, 0
     max_length = 0
 
-    # Since Q is about - non-repeating, use hashmap or set()
+    # Since Q is about - non-repeating, use hash-map or set()
     seen = {}
 
     for i, char in enumerate(string):
