@@ -7,7 +7,10 @@ Solutions to leetcode online challenges, topic wise.
 
 ### Strategy:   
 1. We need to split our time between solving new problems & revising old ones.   
-2. Everyday 10 Problems - Goal     
+2. Everyday 10 Problems - Goal    
+3. We need map 1-Topic per day and keep going     
+4. During contests - we need to attack the entire Q-bank for that contest in Explore section.      
+5. Learning is as important as revising. ---> Lead to solving more problems.       
 
 __Leetcode Count__: 329/1305           
 
