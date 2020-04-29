@@ -1,3 +1,7 @@
+"""
+Given a string - return the longest substring, that is a Palindrome
+"""
+
 def longest_substring_palindrome(string):
     palindrome = ''
 

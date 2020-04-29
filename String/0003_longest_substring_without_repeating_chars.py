@@ -1,6 +1,6 @@
 """
 To return the "length" of the longest sub-string without repeating characters
-< SLIDING WINDOW >
+TECHNIQUE : < SLIDING WINDOW >
 """
 
 def longest_substring_without_repeat_chars(string):
