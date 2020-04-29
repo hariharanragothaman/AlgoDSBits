@@ -4,7 +4,7 @@ Note: all vowels should have even count.
 """
 from collections import Counter
 
-# Method #1: This is the O(n^2) solution ; and has to be improved by SLIDING WINDOW
+# Method #1: This is the O(n^2) solution ; and has to be improved by SLIDING WINDOW (or) by bit manipulation
 def longest_substring_even_vowels_count(s):
     vowels = ['a', 'e', 'i', 'o', 'u']
     max_length = 0
