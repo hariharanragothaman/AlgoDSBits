@@ -31,7 +31,7 @@ def length_of_longest_substring_K_distinct_sliding_window(string, k):
         We have to move the left pointer?
         """
         if len(seen) == k+1:
-            index = min(seen.values()) 
+            index = min(seen.values())
             del seen[string[index]]
             left = index + 1
 
