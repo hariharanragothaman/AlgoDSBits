@@ -6,6 +6,8 @@ pypi modules - pyavl, rbtree - for self balancing BST
 """
 
 from collections import Counter
+from collections import OrderedDict
+
 import heapq
 import itertools
 
@@ -73,6 +75,7 @@ x = 5 if y > 10 else 25
 2-D Matrices Hacks
 """
 # Getting Transpose of 2D matrix - Basically gets all the columns - makes it as rows
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 matrix[:] = zip(*matrix)
 
 # Rotating a 2D matrix - Basically do transpose and reverse each row
@@ -94,6 +97,7 @@ def get_columns(matrix):
 String related hacks
 """
 
+
 # Check if 's' is a subsequence of t - Method1
 def is_sub_sequence(s, t):
     for i in range(len(s)):
@@ -112,3 +116,20 @@ def is_sub_sequence2(s, t):
     # if it's false - for one of the char is not found.
     # iter - takes care of it - next()
     return all(c in t for c in s)
+
+
+# --------------------------------------------------------------------------------------------------------------------
+"""
+Ordered Dictionary - OrderedDict
+Methods to know are: 
+1. move_to_end(value) - Moved the value to the end of the dict 
+2. popitem() - popitem(last=True) if True - LIFO, else FIFO
+"""
+
+inp = "leetcodeisawesome"
+ctr = OrderedDict(Counter(inp))
+print(ctr)
+
+# ------------------------------------------------------------------------------------------------------
+
+# STACK & BFS || Queue and DFS
