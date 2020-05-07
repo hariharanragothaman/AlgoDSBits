@@ -39,6 +39,7 @@ top_three_smallest = heapq.nsmallest(3, marks)
 # Flatten a list of lists
 list1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 flt = list(itertools.chain.from_iterable(list1))
+flat_list = [item for sublist in l for item in sublist]
 
 # Usage of all()
 # It takes an iterable and returns if the contents of the iterable is True
@@ -133,3 +134,6 @@ print(ctr)
 # ------------------------------------------------------------------------------------------------------
 
 # STACK & BFS || Queue and DFS
+
+a = "abc"
+a.re

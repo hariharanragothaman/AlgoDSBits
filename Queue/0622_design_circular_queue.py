@@ -9,6 +9,8 @@ q = deque()
 
 # appending elements to the right side of the queue
 q.append(5)
+q.append(234)
+q.append(576)
 cnt = q.count(5)
 print(cnt)
 
