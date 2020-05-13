@@ -135,5 +135,81 @@ print(ctr)
 
 # STACK & BFS || Queue and DFS
 
-a = "abc"
-a.re
+# This is the Level-Order Traversal template (BFS)
+
+
+from collections import deque
+class Solution:
+    def maxDepth(self, root: TreeNode) -> int:
+        depth = 0
+        if not root: return 0
+
+        q = deque([root])
+        storage = []
+
+        while q:
+            storage.append([])
+
+            for i in range(len(q)):
+                node = q.popleft()
+                storage[depth].append(node.val)
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+
+            # print("The queue is:", q)
+            # print("The storage is:", storage)
+            depth += 1
+
+        return depth
+
+# A neat trick we learnt: - These 2 are equivalent
+# WOW - Just wow
+
+queue += filter(None, (node.right, node.left))
+
+if node.right:
+    queue += [node.right]
+if node.left:
+    queue += [node.left]
+
+# DFS - template - And this is Pre-order Traversal
+from collections import deque
+
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def preorderTraversal(self, root: TreeNode) -> List[int]:
+        """
+             2
+            / \
+           1   3
+            \
+             4
+        """
+        result = []
+        if root is None:
+            return result
+
+        stack = [root, ]
+        while stack:
+            node = stack.pop()
+            if node:
+                result.append(node.val)
+
+                # root - left - right
+                # what you want after, root, append at last in the stack.
+                if node.right:
+                    stack.append(node.right)
+                if node.left:
+                    stack.append(node.left)
+        return result
+
+# PostOrder is just reverse of Pre-order - Wow. Good
+#Inorder Traversal of the BST yields a sorted array.
