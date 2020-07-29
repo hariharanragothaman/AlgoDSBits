@@ -3,7 +3,16 @@ Things to use frequently and master
 list, deque, set, dict, defaultdict, heapq, sorted, bisect, itertools, functools, reduce, map, random
 pypi modules - pyavl, rbtree - for self balancing BST
 
+# Famous algorithms to remember and know very well.....
+1. Kadanee's algorithm - maximum sum sub-array
+2. Manchester's algorithm
+3. Floyd Warshall 2-pointer technique
+4. Lowest Common Ancestor in a B-Tree and BST
+4. Moving Average in a stream - using a queue
+4. Maximum Subarray - Kadane's algorithm -
+5. subarray equal K - Cumulative sum
 """
+
 
 from collections import Counter
 from collections import OrderedDict
@@ -39,7 +48,7 @@ top_three_smallest = heapq.nsmallest(3, marks)
 # Flatten a list of lists
 list1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 flt = list(itertools.chain.from_iterable(list1))
-flat_list = [item for sublist in l for item in sublist]
+flat_list = [item for sublist in list1 for item in sublist]
 
 # Usage of all()
 # It takes an iterable and returns if the contents of the iterable is True
@@ -56,7 +65,6 @@ op = dict(zip(t1, t2))
 # To find all factors of a number in python
 from functools import reduce
 
-
 def factors(n):
     return set(reduce(list.__add__,
                       ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0)))
@@ -70,6 +78,19 @@ add(4, 5)
 # [if_true] if [condition] else [if_false]
 y = 20
 x = 5 if y > 10 else 25
+
+# Kadane's algorithm
+# Kadane's algorithm
+nums = [-2,1,-3,4,-1,2,1,-5,4]
+n = len(nums)
+max_sum = nums[0]
+
+for i in range(1, n):
+    if nums[i - 1] > 0:
+        nums[i] += nums[i - 1]
+    max_sum = max(nums[i], max_sum)
+
+print(max_sum)
 
 # ------------------------------------------------------------------------------------------------------------------
 """
@@ -137,8 +158,6 @@ print(ctr)
 
 # This is the Level-Order Traversal template (BFS)
 
-
-from collections import deque
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
         depth = 0
@@ -212,4 +231,20 @@ class Solution:
         return result
 
 # PostOrder is just reverse of Pre-order - Wow. Good
-#Inorder Traversal of the BST yields a sorted array.
+#Inorder Traversal of the BST yields a sorted array.cd cd
+
+# To generate all possible sub-strings
+for i in range(len(nums)):
+    for j in range(i+1, len(nums)+1):
+        print(nums[i:j])
+
+# using the 'end' as a seperator while printing
+print(val, end="")
+
+from collections import defaultdict
+d = defaultdict(list)
+d['python'].append("awesome")
+d['something-else'].append("not relevant")
+d['python'].append("language")
+for i in d.items():
+    print (i)
